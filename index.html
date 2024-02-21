@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="English">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="./src/css/styles.css">
+    <title>Ryan Talbot</title>
+</head>
+<body>
+    <div class="header"><h1>DAYDREAM</h1></div>
+    <div id="topbar">
+        <button class="c-button c-button--gooey selected" onclick="showSubpage('About')">About
+            <div class="c-button__blobs">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </button>
+        <button class="c-button c-button--gooey" onclick="showSubpage('Inspiration')">Inspiration
+            <div class="c-button__blobs">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </button>
+        <button class="c-button c-button--gooey" onclick="showSubpage('Plan & Goals')">Plan & Goals
+            <div class="c-button__blobs">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </button>
+        <button class="c-button c-button--gooey" onclick="showSubpage('Download')">Download
+            <div class="c-button__blobs">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </button>
+    </div>
+
+    <div id="About" class="subpage active">
+        <div class="image-container">
+            <img src="./src/images/Team_USA_pics/flag_flex.jpg" alt="flag_flex.jpg">
+        </div>
+    
+        <div id="timer">
+            <h3 id="session-length">You've been here for 0 seconds</h3>
+            <ul id="events">
+                <!-- Time based events will be added here -->
+            </ul>
+        </div>
+
+        <div id="about-text">
+            <h1>Background</h1>
+            <p>This is some sample text</p>
+            <p>This is more sample text</p>
+            <h2>It can have some formatting</h2>
+            <p>Ok you get the idea we can change this now</p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+    
+        <div id="image-section">
+            <img id="image" src="" alt="Image description">
+        </div>
+        <div id="text-section">
+            <p id="text"></p>
+        </div>
+        <div>
+            <h1>Timeline of the business:</h1>
+            <p>(click for more details)</p>
+            <div id="yearDiv" style="display: flex; justify-content: space-between;">
+                <span id="startYear">2020</span>
+                <span id="currentYear"></span>
+            </div>
+        </div>
+        <div id="timeline">
+            <!-- Timeline items will be added here by JavaScript -->
+        </div>
+    </div>
+    <div id="Inspiration" class="subpage">
+        <div class="container">
+            <h1>Some more words perhaps</h1>
+            
+            <div id="origin">
+                <h2>Here is how we will do this</h2>
+                <p>You give us your credit card and the three funny numbers on the back --</p>
+                <p>Then we may (or may not) be able to help you talk to women!</p>
+            </div>
+    
+    
+            <div id="description">
+                <h2>You can follow these steps to make a cute profile:</h2>
+                <ul>
+                    <li>Photos of holding fish</li>
+                    <li>A screenshot of your GPA</li>
+                    <li>Blurry photos</li>
+                    <li>A legible copy of your fake ID</li>
+                    <li>Set your name to McLovin</li>
+                    <li>Selfies in Rice University merch</li>
+                </ul>
+            </div>
+
+            <div class="content">
+                <h1>Here are some statistics and numbers:</h1>
+                <p>They may or may not be reused track and field data for now...</p>
+            </div>
+            <div class="statistics-section">
+                <!-- The track-event divs will be created here by your JavaScript -->
+            </div>
+    
+        </div>
+
+        </div>
+        <div id="Plan & Goals" class="subpage">
+                <div class="image-container">
+                    <img src = './src/images/msu_logo.jpg' alt="msu_logo.jpg">
+                </div>
+                <div>
+                    <p>This is whay the logo of a winning basketball team looks like</p>
+
+                    <p>... just kidding we lost to Iowa</p>
+
+                    <blockquote>
+                    <p>"I have to carry the entire team --"</p>
+                    <p>"I can't be expected to drop 30 every game" -Tyson Walker (probably)</p>
+                    </blockquote>
+
+                </div>
+        </div>
+    <div id="Download" class="subpage" style="justify-content: center;">
+        <p>Here are some links with photos</p>
+        <p>Just kidding hard to have links before stuff is uploaded</p>
+        <p>Have another logo as a sample image:</p>
+        <div class="image-container">
+            <img src = './src/images/team_usa_logo.png' alt="team usa logo">
+        </div>
+    </div>
+
+    <div id="footer">
+        <h3>Follow along with our journey</h3>
+        <div class="footer-links">
+            <a href="https://www.instagram.com/" target="_blank"><img src="src/images/Instagram_Logo.jpg" alt="Instagram Logo"></a>
+            <a href="https://msuspartans.com/"><img src = "./src/images/msu_logo.jpg" alt="MSU"></a>
+            <a href="https://worldathletics.org/"><img src = "./src/images/World_Athletics_Logo.jpg" alt="World Athletics"></a>
+        </div>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: block; height: 0; width: 0;">
+        <defs>
+            <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
+                <feBlend in="SourceGraphic" in2="goo"></feBlend>
+            </filter>
+        </defs>
+    </svg>
+
+    <script src="./src/js/main.js"></script>
+</body>
+</html>
