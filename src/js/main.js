@@ -27,10 +27,10 @@ var trackEvents = [
 
         var events = [
             {title: '11/23', description: 'Event 1', symbol: 'fas fa-medal', date: 2023, color: '#cd7f32', image: 'src\images\branding\Designer.png'},
-            {title: '5/22', description: 'Event 2', symbol: 'fas fa-medal', date: 2022, color: 'gold', image: 'src\images\branding\Designer (1).png'},
-            {title: '2/19', description: 'Event 3', symbol: 'fas fa-medal', date: 2019, color: 'gold', image: 'src\images\branding\Designer (2).png'},
-            {title: '12/18', description: 'Event 4', symbol: 'fas fa-graduation-cap', date: 2018, color: 'darkgreen', image: 'src\images\branding\Designer (3).png'},
-            {title: '4/16', description: 'Event 5', symbol: 'fas fa-walking', date: 2016, color: 'green', image: 'src\images\branding\Designer (4).png'},
+            {title: '5/22', description: 'Event 2', symbol: 'fas fa-medal', date: 2022, color: 'gold', image: 'src/images/branding/1.png'},
+            {title: '2/21', description: 'Event 3', symbol: 'fas fa-medal', date: 2019, color: 'gold', image: 'src\images\branding\Designer(2).png'},
+            {title: '12/21', description: 'Event 4', symbol: 'fas fa-graduation-cap', date: 2018, color: 'darkgreen', image: 'src\images\branding\Designer(3).png'},
+            {title: '4/24', description: 'Event 5', symbol: 'fas fa-walking', date: 2016, color: 'green', image: 'src\images\branding\Designer(4).png'},
         ];
         var currentYear = new Date().getFullYear();
 
