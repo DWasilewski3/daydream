@@ -26,11 +26,11 @@ var trackEvents = [
         var sessionStart = Date.now(); // Initialize sessionStart when the user loads the website
 
         var events = [
-            {title: '11/23', description: 'Ryan placed 3rd at the Pan-American Games hosted in Chile. This was his first competition representing the United States of America', symbol: 'fas fa-medal', date: 2023, color: '#cd7f32', image: 'src/images/timeline/panam-tv.png'},
-            {title: '5/22', description: 'Ryan won the decathlon event at the Big Ten conference championship and set a new Michigan State University decathlon record of 8064', symbol: 'fas fa-medal', date: 2022, color: 'gold', image: 'src/images/timeline/big-ten-first-place.png'},
-            {title: '2/19', description: 'Ryan broke his own pole vault record for the last time in high school and won the indoor state meet with a height of 16ft 0in. This record still remains unbroken today', symbol: 'fas fa-medal', date: 2019, color: 'gold', image: 'src/images/timeline/hs-pr.png'},
-            {title: '12/18', description: 'Ryan committed to the Michigan State University track and field team', symbol: 'fas fa-graduation-cap', date: 2018, color: 'darkgreen', image: 'src/images/timeline/commitment.png'},
-            {title: '4/16', description: 'Ryan set the Forest Hils Central High School record for pole vault at 13ft 2in', symbol: 'fas fa-walking', date: 2016, color: 'green', image: 'src/images/timeline/hs-outdoor-pr.png'},
+            {title: '11/23', description: 'Event 1', symbol: 'fas fa-medal', date: 2023, color: '#cd7f32', image: 'src\images\branding\Designer.png'},
+            {title: '5/22', description: 'Event 2', symbol: 'fas fa-medal', date: 2022, color: 'gold', image: 'src\images\branding\Designer (1).png'},
+            {title: '2/19', description: 'Event 3', symbol: 'fas fa-medal', date: 2019, color: 'gold', image: 'src\images\branding\Designer (2).png'},
+            {title: '12/18', description: 'Event 4', symbol: 'fas fa-graduation-cap', date: 2018, color: 'darkgreen', image: 'src\images\branding\Designer (3).png'},
+            {title: '4/16', description: 'Event 5', symbol: 'fas fa-walking', date: 2016, color: 'green', image: 'src\images\branding\Designer (4).png'},
         ];
         var currentYear = new Date().getFullYear();
 
@@ -198,99 +198,6 @@ var trackEvents = [
 
         var scoreInput = document.getElementById('deacthlon-score-' + index);
         return parseFloat(scoreInput.value); 
-        }
-
-        function drawLines(inputElement, value1, value2, value3) {
-        // 'inputElement' is the HTML element of the input box
-
-        // Get the bounding rectangle of the input element
-        const rect = inputElement.getBoundingClientRect();
-
-        // Use the top property of the bounding rectangle as the height
-        // Add window.scrollY to account for any scrolling
-        const inputHeight = rect.top + window.scrollY;
-
-        // Find the maximum score to set the longest line's length
-        const maxScore = Math.max(value1, value2, value3);
-
-        // Calculate the relative lengths of the lines
-        const length1 = (value1 / maxScore) * 100;
-        const length2 = (value2 / maxScore) * 100;
-        const length3 = (value3 / maxScore) * 100;
-
-        // Get the container where the lines will be drawn
-        const visualization = document.getElementById('deacthlon-visual-container');
-
-        // Create a container for the lines at the specified height
-        const lineContainer = document.createElement('div');
-        lineContainer.style.position = 'absolute';
-        lineContainer.style.top = inputHeight + 'px'; // Set the top position to the input box's height
-        lineContainer.style.width = '80%'; // Set the width to half of the screen
-        lineContainer.style.left = '10%' //padding
-        lineContainer.style.height = '20px'; // Height of the line
-
-        // Function to create a line with gradient and hover effect
-        function createLine(length, color) {
-            const line = document.createElement('div');
-            line.style.width = length + '%';
-            line.style.height = '100%';
-            line.style.backgroundColor = color;
-            line.style.position = 'absolute';
-            line.style.borderRadius = '10px'; // Rounded edges
-            line.style.backgroundImage = 'linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.5))'; // Gradient effect
-
-            // Create a span element for the score value
-            const scoreValue = document.createElement('span');
-            scoreValue.textContent = length.toFixed(1) + '%'; // Display the percentage value
-            scoreValue.style.position = 'absolute';
-            scoreValue.style.left = '100%'; 
-            scoreValue.style.marginLeft = '5px';
-            scoreValue.style.visibility = 'hidden'; // Hide by default
-            line.appendChild(scoreValue);
-
-            // Add hover effect to show score value
-            line.addEventListener('mouseenter', function() {
-            scoreValue.style.visibility = 'visible';
-            });
-            line.addEventListener('mouseleave', function() {
-            scoreValue.style.visibility = 'hidden';
-            });
-
-            return line;
-        }
-
-        // Create and append lines to the container
-        if(length1 >= length2 && length1 >= length3){
-            lineContainer.appendChild(createLine(length1, 'red'));
-            if(length2 >= length3){
-                lineContainer.appendChild(createLine(length2, 'green'));
-                lineContainer.appendChild(createLine(length3, 'blue'));
-            } else {
-                lineContainer.appendChild(createLine(length3, 'blue'));
-                lineContainer.appendChild(createLine(length2, 'green'));
-            }
-        } else if(length2 >= length1 && length2 >= length3){
-            lineContainer.appendChild(createLine(length2, 'green'));
-            if (length1 >= length3){
-                lineContainer.appendChild(createLine(length1, 'red'));
-                lineContainer.appendChild(createLine(length3, 'blue'));
-            } else {
-                lineContainer.appendChild(createLine(length3, 'blue'));
-                lineContainer.appendChild(createLine(length1, 'red'));
-            }
-        } else {
-            lineContainer.appendChild(createLine(length3, 'blue'));
-            if(length1 >= length2){
-                lineContainer.appendChild(createLine(length1, 'red'));
-                lineContainer.appendChild(createLine(length2, 'green'));
-            } else {
-                lineContainer.appendChild(createLine(length2, 'green'));
-                lineContainer.appendChild(createLine(length1, 'red'));
-            }
-        }
-
-        // Append the container to the visualization area
-        visualization.appendChild(lineContainer);
         }
 
         document.getElementById('contactForm').addEventListener('submit', function(event) {
