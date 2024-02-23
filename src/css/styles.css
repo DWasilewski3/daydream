@@ -16,12 +16,14 @@
 
 body {
   overflow-x: hidden;
-  background: linear-gradient(to bottom, darkgrey, lightgrey);
+  background: linear-gradient(to bottom, black, darkslateblue);
   margin: 0;
 }
 p, h1, h2, h3, h4, h5, h6, ul {
+  font-family: '1955', sans-serif;
   margin-left: 5%;
   margin-right: 5%;
+  color: lightsalmon;
 }
 #topbar {
   display: flex;
@@ -48,7 +50,6 @@ p, h1, h2, h3, h4, h5, h6, ul {
 .header {
   text-align: center;
   padding: 20px;
-  color: darkgrey;
   background: linear-gradient(to top right, black 0%, #190019 25%, #320032 50%, #4b004b 75%, #640064 100%);
   display: flex;
   justify-content: center;
@@ -56,18 +57,18 @@ p, h1, h2, h3, h4, h5, h6, ul {
   height: 25vh;
 }
 .header h1 {
-  font-family: '1955', sans-serif;
+  color: lightgrey;
   font-size: 80px;
   margin: 0;
-  text-shadow: 0 0 10px grey, 0 0 20px grey, 0 0 30px grey, 0 0 40px grey, 0 0 50px grey, 0 0 60px grey; /* Add initial glow */
-  animation: glow 3s ease-in-out infinite alternate;
+  text-shadow: 0 0 30px purple, 0 0 40px purple, 0 0 50px darkmagenta, 0 0 60px darkmagenta 0 0 70px darkorchid, 0 0 80px purple;
+  animation: glow 4s ease-in-out infinite alternate;
 }
 @keyframes glow {
   from {
-      text-shadow: 0 0 20px grey, 0 0 30px grey, 0 0 40px grey, 0 0 50px grey, 0 0 60px grey;
+      text-shadow: 0 0 20px darkorange, 0 0 30px darkorange, 0 0 40px darkred, 0 0 50px darkmagenta, 0 0 60px darkorchid;
   }
   to {
-      text-shadow: 0 0 30px purple, 0 0 40px purple, 0 0 50px purple, 0 0 60px purple, 0 0 70px purple, 0 0 80px purple; /* Increase glow */
+      text-shadow: 0 0 30px purple, 0 0 40px purple, 0 0 50px darkmagenta, 0 0 60px darkmagenta 0 0 70px darkorchid, 0 0 80px purple; /* Increase glow */
   }
 }
 @media (max-width: 600px) {
@@ -89,9 +90,11 @@ p, h1, h2, h3, h4, h5, h6, ul {
 
 .subpage {
   display: none;
+  color: lightsalmon;
 }
 .active {
   display: block;
+  color: lightsalmon;
 }
 .c-button {
   color: #000;
@@ -113,14 +116,14 @@ p, h1, h2, h3, h4, h5, h6, ul {
   color: darkslateblue;
   text-transform: uppercase;
   letter-spacing: 2px;
-  border: 4px solid pink;
+  border: 2px solid darkslateblue;
   border-radius: 0;
   position: relative;
   transition: all 700ms ease;
 }
 .selected {
   background-color: darkmagenta;
-  color: white;
+  color: pink;
 }
 
 .c-button--gooey .c-button__blobs {
@@ -240,15 +243,6 @@ p, h1, h2, h3, h4, h5, h6, ul {
 .no-bullet {
   list-style-type: none;
 }
-
-  p {
-      font-family: 'Arial', sans-serif; /* Change the font to Arial. */
-      font-size: 16px; /* Set the font size to 16 pixels. */
-      line-height: 1.6; /* Set the space between lines. */
-      color: #333; /* Set the text color. */
-      margin-bottom: 20px; /* Add space below each paragraph. */
-      text-align: justify; /* Align the text to both left and right margins. */
-  }
 
 .container {
       display: flex;
